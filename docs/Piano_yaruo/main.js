@@ -2,14 +2,14 @@
 var list = ["C3", "D3", "E3", "F3", "G3", "A3", "B3", "C4",
             "Cp3", "Dp3", "Fp3", "Gp3", "Ap3" ];
 
-const url = "https://tetyaaaaan.github.io/";
+const url = "https://tetyaaaaan.github.io/Piano_yaruo/";
 
 var ext = '.wav';
 if((new Audio()).canPlayType('audio/ogg') == 'maybe') { ext = '.ogg'; }
 for(var i=0; i<list.length; i++){
     var ele = document.getElementById(list[i]);
     ele.addEventListener("mousedown", function(){
-                         var path = "audio/"+this.id+ext;
+                         var path = url+"audio/"+this.id+ext;
                          var audioObj = new Audio(path);
                          audioObj.volume = 0.3;
                          audioObj.play();
@@ -44,7 +44,7 @@ document.addEventListener("keydown", function(e){
                           for(var i=0; i<keydata.length; i++){
                           if (k == keydata[i].key){
                           if(!keydata[i].isPressing){
-                          var path = "audio/"+keydata[i].sound+ext;
+                          var path = url+"audio/"+keydata[i].sound+ext;
                           var audioObj = new Audio(path);
                           audioObj.volume = 0.3;
                           audioObj.play();
