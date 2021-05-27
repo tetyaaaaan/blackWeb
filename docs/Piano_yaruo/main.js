@@ -3,6 +3,11 @@ var list = ["C3", "D3", "E3", "F3", "G3", "A3", "B3", "C4",
             "Cp3", "Dp3", "Fp3", "Gp3", "Ap3" ];
 
 const url = "https://tetyaaaaan.github.io/Piano_yaruo/";
+/*let audioObj={};
+for(i=0; i<list.length; i++){
+    var path = url+"audio/"+this.id+ext;
+    audioObj = new Audio(path);
+}*/
 
 var ext = '.wav';
 if((new Audio()).canPlayType('audio/ogg') == 'maybe') { ext = '.ogg'; }
