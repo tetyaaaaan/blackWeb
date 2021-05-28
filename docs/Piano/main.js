@@ -10,6 +10,12 @@ var list = ["A1", "B1",
 
 const url = "https://tetyaaaaan.github.io/Piano/";
 
+let adios={};
+for(i=0; i<list.length; i++){
+    var path = url+"audio/"+list[i]+".mp3";
+    adios[this[id]] = new Audio(path);
+}
+
 for(var i=0; i<list.length; i++){
     var ele = document.getElementById(list[i]);
     ele.addEventListener("mousedown", function(){
