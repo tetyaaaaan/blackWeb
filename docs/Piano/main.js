@@ -1,7 +1,4 @@
 // クリックイベントを設定
-var lis2 = ["C3", "D3", "E3", "F3", "G3", "A3", "B3", "C4",
-            "Cp3", "Dp3", "Fp3", "Gp3", "Ap3" ];
-
 var list = ["A1", "B1",
             "Ap1",
             "C2", "D2", "E2", "F2", "G2", "A2", "B2",
@@ -11,19 +8,12 @@ var list = ["A1", "B1",
             "C4", "D4", "E4",
             "Cp4", "Dp4" ];
 
-const url = "https://tetyaaaaan.github.io/";
-/*
-let audioObj={};
-for(i=0; i<list.length; i++){
-    var path = url+"audio/"+list[i]+".mp3";
-    audioObj[this[id]] = new Audio(path);
-}
-*/
+const url = "https://tetyaaaaan.github.io/Piano/";
 
 for(var i=0; i<list.length; i++){
     var ele = document.getElementById(list[i]);
     ele.addEventListener("mousedown", function(){
-                         var path = "audio/"+this.id+".mp3";
+                         var path = url+"audio/"+this.id+".mp3";
                          var audioObj = new Audio(path);
                          audioObj.volume = 0.3;
                          audioObj.play();
@@ -38,22 +28,6 @@ for(var i=0; i<list.length; i++){
 }
 
 // キーボード入力に対応させる
-var keydat2 = [
-               { key : "Z", sound : "C3", isPressing : false },
-               { key : "X", sound : "D3", isPressing : false },
-               { key : "C", sound : "E3", isPressing : false },
-               { key : "V", sound : "F3", isPressing : false },
-               { key : "B", sound : "G3", isPressing : false },
-               { key : "N", sound : "A3", isPressing : false },
-               { key : "M", sound : "B3", isPressing : false },
-               { key : String.fromCharCode(188), sound : "C4", isPressing : false },
-               { key : "S", sound : "Cp3", isPressing : false },
-               { key : "D", sound : "Dp3", isPressing : false },
-               { key : "G", sound : "Fp3", isPressing : false },
-               { key : "H", sound : "Gp3", isPressing : false },
-               { key : "J", sound : "Ap3", isPressing : false }
-               ]
-
 var keydata = [
                { code : "KeyZ" , sound : "A1", isPressing : false },
                { code : "KeyX" , sound : "B1", isPressing : false },
@@ -111,10 +85,9 @@ var keydata = [
 document.addEventListener("keydown", function(e){
                           var k = e.code;
                           for(var i=0; i<keydata.length; i++){
-                          //console.log(keydata[i].sound);
                           if (k == keydata[i].code){
                           if(!keydata[i].isPressing){
-                          var path = "audio/"+keydata[i].sound+".mp3";
+                          var path = url+"audio/"+keydata[i].sound+".mp3";
                           var audioObj = new Audio(path);
                           audioObj.volume = 0.3;
                           audioObj.play();
