@@ -50,4 +50,4 @@ function getClock(){
 }
 setInterval('getClock()',1000)
 
-document.write(words);
+//document.write(words);
