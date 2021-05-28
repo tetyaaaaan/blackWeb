@@ -13,7 +13,7 @@ const url = "https://tetyaaaaan.github.io/Piano/";
 let adios={};
 for(i=0; i<list.length; i++){
     var path = url+"audio/"+list[i]+".mp3";
-    adios[this[id]] = new Audio(path);
+    adios[list[i]] = new Audio(path);
 }
 
 for(var i=0; i<list.length; i++){
