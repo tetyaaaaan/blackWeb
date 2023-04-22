@@ -8,11 +8,11 @@ var list = ["A1", "B1",
             "C4", "D4", "E4",
             "Cp4", "Dp4" ];
 
-const url = "https://tetyaaaaan.github.io/Piano/";
+const url = "./audio/";
 
 let adios={};
 for(i=0; i<list.length; i++){
-    var path = url+"audio/"+list[i]+".mp3";
+    var path = url+list[i]+".mp3";
     adios[list[i]] = new Audio(path);
 }
 
