@@ -19,7 +19,7 @@ for(i=0; i<list.length; i++){
 for(var i=0; i<list.length; i++){
     var ele = document.getElementById(list[i]);
     ele.addEventListener("mousedown", function(){
-                         var path = url+"audio/"+this.id+".mp3";
+                         var path = url+this.id+".mp3";
                          var audioObj = new Audio(path);
                          audioObj.volume = 0.3;
                          audioObj.play();
@@ -93,7 +93,7 @@ document.addEventListener("keydown", function(e){
                           for(var i=0; i<keydata.length; i++){
                           if (k == keydata[i].code){
                           if(!keydata[i].isPressing){
-                          var path = url+"audio/"+keydata[i].sound+".mp3";
+                          var path = url+keydata[i].sound+".mp3";
                           var audioObj = new Audio(path);
                           audioObj.volume = 0.3;
                           audioObj.play();
